@@ -24,6 +24,7 @@ class Application
     elsif req.path.match(/add/)
       item = req.params["q"]
       @@cart << item
+      resp.write "added #{item}"
     else
       resp.write "Path Not Found"
     end
